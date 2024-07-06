@@ -1,0 +1,21 @@
+{
+    "name": "redux-store",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "main": "Server/Server.js",
+    "scripts": {
+        "build": "cd Client && npm run build",
+        "dev": "concurrently \"cd Server && npm run watch\" \"cd Client && npm run dev\"",
+        "install": "cd Server && npm i && cd ../Client && npm i --production=false",
+        "render-build": "npm install && npm run build",
+        "seed": "node Server/Config/Seeds.js",
+        "start": "node Server/Server.js"
+    },
+    "keywords": [],
+    "author": "Emily Simone",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
